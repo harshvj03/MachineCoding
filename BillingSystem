@@ -1,0 +1,40 @@
+Billing System
+Guidelines
+Please keep in mind the following points for a better result:
+
+    1. The code should be divided into API(or aspx file) , Models and services and they need to represent the real objects in real world. 
+	2. Please use the OOPS principles wherever applicable
+	3. Please follow SOLID principles wherever applicable
+	4. The review of code will be based on the above points so if you do follow the above points wherever applicable chances of getting a favorable response.
+	5. The machine test is not limited to 1 hr. It can go to 1.5 hours if you think it needs so much time for quality
+In case you have any doubts in below question or any of above points, please ask the recruiter to connect to Madhu.
+
+
+Question
+Following are the requirements
+
+Design Classes, Properties, and Methods for the following requirements for further implementation of the billing system. 
+1.       Company has multiple customers
+2.       Customers have one or more projects that are being executed by the company
+3.       Each project can be run in one of two billing modes
+			a.       Time & Material – Hours are logged by people working on the project and client is billed based on a fixed rate by the hour
+			b.       Milestone Based – Project has milestones and clients are billed a fixed amount when a milestone is completed
+4.      Once the structure is ready, you need to write the logic for this in your design. Once a month, a file is uploaded into the system that has all the bank transactions. These include payments made by customers. Customers may pay all charges for 
+        multiple projects in one payment or may pay per project.Also every payment will match some invoice and it is not generally randomly paid. 
+		Eg - if there is a 100$ and 200$ invoice then the payment will be either 300$(all payments) or it could be 100$ and 200$ separate transactions. it will not be like 150$ which does not match any invoice.
+        So you will need to consider the invoices which are for each project and then match the invoices or sometimes it could be a combination of project payment. However it will match
+		one or more projects completely.
+		
+		Note - if there are multiple amounts matching from a customer and invoice then you can do it in First in first out basis meaning first invoice you get which matches the amount
+		will be shown. Probably in this case the second invoice payment will not be shown in report which is fine.
+		
+			
+        The system must determine matching amounts and display it to the company’s accountant so he can easily tally payments and invoices. Following are the fields in the uploaded sheet.
+		a.       Date
+		b.       Type (Debit/Credit)
+		c.       Amount
+		Basically in the design you incorporate the above logic at right place to work accordingly. Given bank transactions and invoices(first part generates it) you need to match the invoices against bank transactions
+		and see which and all invoices it fulfills and then match it to those invoices. As output you show the matched invoices and amount. If nothing matches at all then nothing to show.
+
+
+
